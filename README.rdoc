@@ -4,4 +4,3 @@
 
 Made with my mentor at [Bloc] (http://bloc.io).
 
-## https://git.heroku.com/vrcooper-blocitoff.git
