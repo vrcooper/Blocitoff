@@ -3,7 +3,11 @@ class UsersController < ApplicationController
 before_action :authenticate_user!, except: [:show]
 
 
-  def update
+  def show
+    @user = User.find(params[:id])
+  end
+
+ def update
     if current_user.update_attributes(user_params)
       flash[:notice] = "User information updated"
       redirect_to edit_user_registration_path
@@ -11,11 +15,6 @@ before_action :authenticate_user!, except: [:show]
       flash[:error] = "Invalid user information"
       redirect_to edit_user_registration_path
     end
-  end
-
-
-  def show
-    @user = User.find(params[:id])
   end
 
   private
