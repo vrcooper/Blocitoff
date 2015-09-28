@@ -1,34 +1,12 @@
-<div class="container">
-  <h2><center>My todos</center></h2>
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Description</th>
-        <th>Days left</th>
-        <th>Complete</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>    
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>    
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>    
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>    
-      </tr>
-    </tbody>
-  </table>
+<div class="col-md-4">
+  <div class="form-group">
+    <%= form_for [@user, Item.new], remote: true do |f| %>
+      <%= f.text_field :name, class: 'form-control', placeholder: "Add another item" %>
+      
+  </div>
+  <div class="form-group">
+    <%= f.submit "Submit item", class: 'btn btn-success' %>
+    <% end %>
+  </div>
 </div>
+
