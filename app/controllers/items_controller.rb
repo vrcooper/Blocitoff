@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
       @user = User.find(params[:user_id])
       @items = @user.items
 
-      @item = Item.new
+      @item = Item.new  
       @item = current_user
      
 

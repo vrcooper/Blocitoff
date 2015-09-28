@@ -1,2 +1,5 @@
-<h1>Items#create</h1>
-<p>Find me in app/views/items/create.html.erb</p>
+<h1>Create item</h1>
+
+<div class "col-md-8">
+  <%= render partial: 'items/form', locals: { user: @user, item: @new_item}) %>
+</div>
