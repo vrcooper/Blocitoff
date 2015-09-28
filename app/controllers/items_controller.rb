@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
       @user = current_user
       @items = @user.items
 
-      @item = Item.new  
+      @item = Item.new( item_params )  
       @item.user = current_user
      
 
@@ -19,12 +19,16 @@ class ItemsController < ApplicationController
        
      else
        flash[:error] = "There was an error saving the item. Please try again."
-       end
+      end
+
+
+    redirect_to root_url
+   
    end
 
-   respond_to do |format|
-    format.html
-    format.js
-  end
+private 
 
+  def item_params
+    params.require(:item).permit(:name, :body)
+  end
 end
