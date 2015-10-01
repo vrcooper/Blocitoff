@@ -16,3 +16,8 @@
   <%= f.submit "Submit item", class: 'btn btn-success' %>
 <% end %>
 </div>
+<div class="row">
+  <div class="form-group">
+    <%= link_to " ", user_item_path(current_user, item), method: :delete, remote: true, class: 'glyphicon glyphicon-ok'%>
+  </div>
+

@@ -26,6 +26,17 @@ class ItemsController < ApplicationController
    
    end
 
+  def destroy
+    @item = current_user.items.find(params[:id])
+    @item.destroy
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+
+  end
+
 private 
 
   def item_params
