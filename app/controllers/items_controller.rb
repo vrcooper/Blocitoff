@@ -31,7 +31,7 @@ class ItemsController < ApplicationController
     @item.destroy
 
     respond_to do |format|
-      format.html
+      format.html{redirect_to root_url}
       format.js
     end
 
