@@ -16,8 +16,12 @@
   <%= f.submit "Submit item", class: 'btn btn-success' %>
 <% end %>
 </div>
+
 <div class="row">
   <div class="form-group">
-    <%= link_to " ", user_item_path(current_user, item), method: :delete, remote: true, class: 'glyphicon glyphicon-ok'%>
+   <% @items.each do |item| %>
+    <%= link_to " ", [item.user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok'%><%= item.name %>
+    <% end %>
   </div>
+  
 
