@@ -1,7 +1,7 @@
-<li class="item">
-  <%= item.name %>
+<li class="item clearfix">
+  <div class='pull-left'><%= item.name %></div>
   
-  <center><%= "#{item.days_left} days left" %></center>
+  <div class='time-left text-center'><%= "#{item.days_left} days left" %></div>
   
-  <%= link_to " ", [item.user, item], method: :delete, class: 'glyphicon glyphicon-ok pull-right'%>
+  <div class='pull-right'><%= link_to " ", [item.user, item], method: :delete, class: 'glyphicon glyphicon-ok'%></div>
 </li>
