@@ -1,5 +1,7 @@
 <li class="item">
   <%= item.name %>
-  <%= "#{item.days_left} days left" %>
+  
+  <center><%= "#{item.days_left} days left" %></center>
+  
   <%= link_to " ", [item.user, item], method: :delete, class: 'glyphicon glyphicon-ok pull-right'%>
 </li>
