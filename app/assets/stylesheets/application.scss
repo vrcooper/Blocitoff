@@ -8,3 +8,12 @@
 .nav {
   margin-top: 5px;
 }
+
+.items > .item:nth-child(even) {
+  background-color: #C5E1EB;
+}
+
+.item{
+  padding: 20px;
+}
+

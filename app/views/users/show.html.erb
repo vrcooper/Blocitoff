@@ -1,18 +1,16 @@
-<div class="row">
-  <div class="col-md-8">
-    <h1>To-Do items</h1>
-    <ul class="items">
-      <% @items.each do |item| %>
-        <li class="item"><%= item.name %></li>
-      <% end %>
-    </ul>
+<div class="item-container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>To-Do items</h1>
+      <ul class="items list-unstyled">
+       <%= render @items %>
+      </ul>
+    </div>
   </div>
-</div>
-<div class="row">
-<%= form_for [@user, @item] do |f| %>
-  <div class="form-group">
-    <%= f.text_field :name, class: 'form-control', placeholder: "Add another item" %>
+
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <%= render partial: 'items/form' %>
+      </div>
+    </div>
   </div>
-  <%= f.submit "Submit item", class: 'btn btn-success' %>
-<% end %>
-</div>
